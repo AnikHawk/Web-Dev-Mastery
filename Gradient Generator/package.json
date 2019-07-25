@@ -1,0 +1,14 @@
+{
+    "name": "gradient-generator",
+    "version": "1.0.0",
+    "description": "Simple gradient background generator",
+    "main": "gradient.js",
+    "scripts": {
+        "build": "browserify gradient.js > bundle.js && live-server"
+    },
+    "author": "Altamas Haque Anik",
+    "license": "ISC",
+    "dependencies": {
+        "lodash": "^4.17.15"
+    }
+}
