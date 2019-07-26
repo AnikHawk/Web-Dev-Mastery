@@ -15,6 +15,8 @@ class App extends Component {
     };
   }
 
+
+
   onSearchChange = event => {
     this.setState({
       query: event.target.value,
