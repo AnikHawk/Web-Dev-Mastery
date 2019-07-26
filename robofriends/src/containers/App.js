@@ -4,6 +4,7 @@ import CardList from '../components/CardList';
 import Searchbox from '../components/SearchBox';
 import './App.css';
 import Scroll from '../components/Scroll';
+import ErrorBoundaries from '../components/ErrorBoundaries';
 
 class App extends Component {
   constructor() {
@@ -32,13 +33,15 @@ class App extends Component {
 
     return (
       <div className="tc">
-        <h1 className="f1"> RoboFriends </h1>{' '}
-        <Searchbox onChange={this.onSearchChange} />{' '}
+        <h1 className="f1"> RoboFriends </h1>
+        <Searchbox onChange={this.onSearchChange} />
         <Scroll>
-          <div id="card-grid">
-            <CardList robots={targets} />{' '}
-          </div>{' '}
-        </Scroll>{' '}
+          <ErrorBoundaries>
+            <div id="card-grid">
+              <CardList robots={targets} />
+            </div>
+          </ErrorBoundaries>
+        </Scroll>
       </div>
     );
   }
