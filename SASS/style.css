@@ -1,0 +1,51 @@
+header {
+  background: lightblue;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 70vh;
+}
+
+header button {
+  color: white;
+  background-color: black;
+}
+
+header button:hover {
+  background-color: #3410ff;
+}
+
+header button::after {
+  background-color: red;
+}
+
+.contact {
+  background: lightblue;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 70vh;
+}
+
+.contact button {
+  color: white;
+  background-color: indigo;
+}
+
+.contact button:hover {
+  background-color: #3410ff;
+}
+
+.contact button::after {
+  background-color: red;
+}

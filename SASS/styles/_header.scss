@@ -1,0 +1,26 @@
+@import './variables';
+@mixin flexCenter() {
+    background: lightblue;
+    display: flex;
+    justify-content: center;
+    height: 70vh;
+}
+
+@mixin btnStyle($color, $hover) {
+    color: white;
+    background-color: $color;
+    &:hover {
+        background-color: $hover;
+    }
+    &::after {
+        background-color: red;
+    }
+}
+
+;
+header {
+    @include flexCenter();
+    button {
+        @include btnStyle(black, $hoverColor);
+    }
+}

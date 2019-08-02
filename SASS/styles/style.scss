@@ -1,0 +1,8 @@
+@import './header';
+@import './variables';
+.contact {
+    @include flexCenter();
+    button {
+        @include btnStyle(indigo, $hoverColor);
+    }
+}
