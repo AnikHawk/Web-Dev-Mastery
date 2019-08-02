@@ -1,0 +1,25 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 1em;
+    // align-items: stretch;
+    // grid-template-areas: "burger burger . pizza"" . hotdog hotdog pizza";
+    div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: lightblue;
+        font-size: 5em;
+        text-align: center;
+        padding: .2em;
+        &:nth-child(3n) {
+            background: lightcyan;
+        }
+        &:nth-child(3n + 1) {
+            background: lightgreen;
+        }
+        &:nth-child(3n + 2) {
+            background: lightpink;
+        }
+    }
+}
