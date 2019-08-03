@@ -1,9 +1,19 @@
+body {
+    display: grid;
+    grid-template-columns: 2vw 1fr 2vw;
+}
+
+body>* {
+    grid-column: 2;
+    min-width: 0;
+}
+
 .container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 1em;
-    // align-items: stretch;
-    // grid-template-areas: "burger burger . pizza"" . hotdog hotdog pizza";
+    grid-auto-rows: 150px;
+    grid-auto-flow: dense;
+    grid-gap: .75em;
     div {
         display: flex;
         align-items: center;
@@ -12,14 +22,41 @@
         font-size: 5em;
         text-align: center;
         padding: .2em;
-        &:nth-child(3n) {
+        &:nth-child(5n) {
             background: lightcyan;
         }
-        &:nth-child(3n + 1) {
-            background: lightgreen;
-        }
-        &:nth-child(3n + 2) {
+        &:nth-child(5n + 1) {
             background: lightpink;
         }
+        &:nth-child(5n + 2) {
+            background: lightgreen;
+        }
+        &:nth-child(5n + 3) {
+            background: lightgray;
+        }
+        &:nth-child(5n + 4) {
+            background: lightblue;
+        }
     }
+}
+
+.horizontal {
+    grid-column: span 2;
+}
+
+.vertical {
+    grid-row: span 2;
+}
+
+.big {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.container>div {
+    transition: all 0.3s linear;
+}
+
+.container>div:hover {
+    box-shadow: rgba(0, 0, 0, 0.8) 0px 5px 15px, inset rgba(0, 0, 0, 0.15) 0px -10px 20px;
 }

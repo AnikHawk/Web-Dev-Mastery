@@ -1,9 +1,24 @@
+body {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2vw 1fr 2vw;
+      grid-template-columns: 2vw 1fr 2vw;
+}
+
+body > * {
+  -ms-grid-column: 2;
+  grid-column: 2;
+  min-width: 0;
+}
+
 .container {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 1em;
+  grid-auto-rows: 150px;
+  grid-auto-flow: dense;
+  grid-gap: .75em;
 }
 
 .container div {
@@ -25,14 +40,46 @@
   padding: .2em;
 }
 
-.container div:nth-child(3n) {
+.container div:nth-child(5n) {
   background: lightcyan;
 }
 
-.container div:nth-child(3n + 1) {
+.container div:nth-child(5n + 1) {
+  background: lightpink;
+}
+
+.container div:nth-child(5n + 2) {
   background: lightgreen;
 }
 
-.container div:nth-child(3n + 2) {
-  background: lightpink;
+.container div:nth-child(5n + 3) {
+  background: lightgray;
+}
+
+.container div:nth-child(5n + 4) {
+  background: lightblue;
+}
+
+.horizontal {
+  grid-column: span 2;
+}
+
+.vertical {
+  grid-row: span 2;
+}
+
+.big {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.container > div {
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.container > div:hover {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.8) 0px 5px 15px, inset rgba(0, 0, 0, 0.15) 0px -10px 20px;
+          box-shadow: rgba(0, 0, 0, 0.8) 0px 5px 15px, inset rgba(0, 0, 0, 0.15) 0px -10px 20px;
 }
